@@ -11,13 +11,13 @@ class Point {
   }
 
   distance(pt2) {
-    // pour x : 
+    // pour x : (xb - xa) au carré = (xb au carré) - (2 * xb *xa) + (xa au carré)
     let xb = this.x * this.x
     let xi = 2 * this.x * this.y
     let xa = this.y * this.y
     let x = xb - xi + xa
 
-    // pour y :
+    // pour y :(yb - ya) au carré = (yb au carré) - (2 * yb * ya) + (ya au carré)
 
     let yb = pt2.x * pt2.x
     let yi = 2 * pt2.x * pt2.y
@@ -32,4 +32,3 @@ const p2 = new Point(10, 11)
 
 console.log(p1.distance(p2))
 
-// pas fini possibilitée d'erreur 
