@@ -1,3 +1,4 @@
+const chalk = require('chalk')
 class Human {
   constructor(firstName, lastName, age, language) {
     this.firstName = firstName
@@ -6,17 +7,17 @@ class Human {
     this.language = language
   }
   printInfo() {
-    console.log(`first name: ${this.firstName}`)
-    console.log(`lastName:${this.lastName}`)
-    console.log(`age: ${this.age}`)
-    console.log(`Language: ${this.language}`)
+    console.log(chalk.red(`first name: ${this.firstName}`))
+    console.log(chalk.green(`lastName: ${this.lastName}`))
+    console.log(chalk.yellow(`age: ${this.age}`))
+    console.log(chalk.blue(`Language: ${this.language}`))
   }
 
   canVote() {
     if (this.age > 18) {
-      console.log(`${this.firstName} can vote`)
+      console.log(chalk.green(`${this.firstName} can vote`))
     } else {
-      console.log(`${this.firstName} can not vote`)
+      console.log(chalk.red(`${this.firstName} can not vote`))
     }
   }
 
@@ -47,3 +48,5 @@ charlie.canVote()
 alice.mostSkilledDev(bob)
 alice.mostSkilledDev(charlie)
 bob.mostSkilledDev(charlie)
+
+exports.Human = Human

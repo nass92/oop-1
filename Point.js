@@ -32,3 +32,4 @@ const p2 = new Point(10, 11)
 
 console.log(p1.distance(p2))
 
+exports.Point = Point

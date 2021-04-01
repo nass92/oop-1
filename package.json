@@ -1,0 +1,12 @@
+{
+  "name": "oop-1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/nass92/oop-1.git",
+  "author": "nass92 <goujanassim@hotmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "readline-sync": "^1.4.10"
+  }
+}
