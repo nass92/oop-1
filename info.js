@@ -34,15 +34,15 @@ printInfo(charlie)
 
 const canVote = (person) => {
   if (person.age > 18) {
-    console.log(`${person.firstName} can vote`)
+    return `${person.firstName} can vote`
   } else {
-    console.log(`${person.firstName} can not vote`)
+    return `${person.firstName} can not vote`
   }
 }
 
-canVote(alice)
-canVote(bob)
-canVote(charlie)
+console.log(canVote(alice))
+console.log(canVote(bob))
+console.log(canVote(charlie))
 
 //fonction qui check qui connait le plus de language de prog
 

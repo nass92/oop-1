@@ -15,19 +15,19 @@ class Human {
 
   canVote() {
     if (this.age > 18) {
-      console.log(chalk.green(`${this.firstName} can vote`))
+      return chalk.green(`${this.firstName} can vote`)
     } else {
-      console.log(chalk.red(`${this.firstName} can not vote`))
+      return chalk.red(`${this.firstName} can not vote`)
     }
   }
 
   mostSkilledDev(perso1) {
     if (this.language.length > perso1.language.length) {
-      console.log(`${this.firstName} know more language than ${perso1.firstName} `)
+      return `${this.firstName} know more language than ${perso1.firstName} `
     } else if (perso1.language.length > this.language.length) {
-      console.log(`${perso1.firstName} know more language than ${this.firstName} `)
+      return `${perso1.firstName} know more language than ${this.firstName} `
     } else {
-      console.log(`${this.firstName} and ${perso1.firstName} know the same number of language`)
+      return `${this.firstName} and ${perso1.firstName} know the same number of language`
     }
   }
 }
@@ -40,13 +40,13 @@ const charlie = new Human('Charlie', 'Charlot', 8, ['Shell'])
 
 
 alice.printInfo()
-alice.canVote()
+console.log(alice.canVote())
 bob.printInfo()
-bob.canVote()
+console.log(bob.canVote())
 charlie.printInfo()
-charlie.canVote()
-alice.mostSkilledDev(bob)
-alice.mostSkilledDev(charlie)
-bob.mostSkilledDev(charlie)
+console.log(charlie.canVote())
+console.log(alice.mostSkilledDev(bob))
+console.log(alice.mostSkilledDev(charlie))
+console.log(bob.mostSkilledDev(charlie))
 
 exports.Human = Human
